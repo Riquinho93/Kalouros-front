@@ -1,0 +1,73 @@
+<div class="container">
+
+		<!-- MENU HORIZONTAL -->
+		<div class="row menu-horizontal col-12">
+				<div class="col-12">
+					<ul class="nav">
+						<li class="nav-item">
+							<a class="nav-link" [routerLink]="[home]">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Service</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Map</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Event</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Service online</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sport</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">History</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" [routerLink]="['modalidade']">Modalities</a>
+						</li>
+						<div *ngFor="let modalidade of modalidades">
+							<a class="nav-link" (click)="listarPorModalidade(modalidade)">{{modalidade.nome}}</a>
+						</div>
+						<div class="col-1" style="float: right;">
+								<a class="btn btn-primary" [routerLink]="['login']">Logout</a>
+							</div>
+					</ul>
+				</div>
+		
+			</div>
+
+
+	<!-- MEIO -->
+	<div class="row meio">
+			<div class="col">
+					<a href="#">
+						<img class="logo" src="assets/imagens/Logo3_Small.PNG" />
+					</a>
+				</div>
+		<!-- CONTEUDO -->
+		<div class="col-9">
+
+			<!-- start: page -->
+			<router-outlet></router-outlet>
+			<!-- end: page -->
+
+		</div>
+	</div>
+
+
+	<!-- RODAPE -->
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<div class="row">
+		<div class="col rodape">
+			<p> Alunos do IPB &#174; Direitos Reservados </p>
+		</div>
+	</div>
+
+</div>

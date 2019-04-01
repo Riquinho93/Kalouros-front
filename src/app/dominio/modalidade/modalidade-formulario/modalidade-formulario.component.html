@@ -1,0 +1,13 @@
+<h1>{{titulo}}</h1>
+
+<form [formGroup]="modalidadeForm" novalidate>
+
+    <div class="form-group">
+        <label for="nome">Name</label>
+        <input type="text" class="form-control" id="nome" placeholder="Modality name" formControlName="nome" />
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="salvar(modalidadeForm.value)">Save</button>
+    <button [routerLink]="['/modalidade']" class="btn btn-default">Back</button>
+
+</form>
